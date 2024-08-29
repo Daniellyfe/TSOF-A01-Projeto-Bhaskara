@@ -22,9 +22,9 @@ namespace BhaskaraApp
         }
 
         // Calculando o valor de Delta
-        private double CalcularDelta()
+        public double CalcularDelta()
         {
-            return B * B + 4 * A * C;
+            return B * B - 4 * A * C;
         }
 
         // Verificando se a equação possui raízes reais
@@ -47,8 +47,8 @@ namespace BhaskaraApp
             double raizDelta = Math.Sqrt(delta);
 
             // Calculando as raízes
-            double x1 = (-B + raizDelta) / (2 * C);
-            double x2 = (-B - raizDelta) / (2 * C);
+            double x1 = (-B + raizDelta) / (2 * A);
+            double x2 = (-B - raizDelta) / (2 * A);
 
             return (x1, x2);
         }
